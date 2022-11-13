@@ -1,13 +1,13 @@
-Feature: login page
+@login
+Feature: buy product
 
-Scenario: valid inputs invalid inputs
+Background:
 Given open the browser
-When pass "<username>" and "<Password>"
+Scenario: Buy a product in Amazon
+When Create account
+When going to search iphone in amazon
+And going to add cart
+And select payment method and buy
 
 Then close the browser
 
-Examples:
-|username|password|
-|gopal|11111|
-|parvathi|2222|
-|jeni|3333|

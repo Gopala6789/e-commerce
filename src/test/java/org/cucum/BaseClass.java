@@ -36,15 +36,14 @@ public class BaseClass  {
 	}
 
 
-public static  void scrn() throws IOException {
+public static  void scrn(String name) throws IOException {
 	TakesScreenshot s = (TakesScreenshot) driver;
 	File src = s.getScreenshotAs(OutputType.FILE);
-	File des = new File("C:\\Users\\ELCOT\\eclipse-workspace\\Automation\\Screenshot.png");
+	File des = new File("C:\\Users\\ELCOT\\eclipse-workspace\\cucu\\screenshot"+name+".png");
 	FileUtils.copyFile(src, des);}
 
 public static void  txtpass(WebElement loc , String logic   ) {
 	loc.sendKeys(logic);
-
 }
 public static void btn(WebElement btn) {
 btn.click();
